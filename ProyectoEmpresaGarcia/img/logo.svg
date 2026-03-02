@@ -1,0 +1,64 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <defs>
+        <linearGradient id="gradBg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="gradAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+        </linearGradient>
+        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+    
+    <!-- Fondo redondeado con gradiente -->
+    <rect width="200" height="200" fill="url(#gradBg)" rx="30" ry="30"/>
+    
+    <!-- Fondo interior con borde -->
+    <rect x="15" y="15" width="170" height="170" fill="none" stroke="url(#gradAccent)" stroke-width="2" rx="25" ry="25" opacity="0.6"/>
+    
+    <!-- Símbolo principal - Chip/Procesador mejorado -->
+    <g filter="url(#shadow)">
+        <!-- Cuadrado central del chip -->
+        <rect x="70" y="55" width="60" height="60" fill="url(#gradAccent)" rx="8" ry="8"/>
+        
+        <!-- Líneas internas del chip -->
+        <line x1="85" y1="55" x2="85" y2="115" stroke="#0f172a" stroke-width="2"/>
+        <line x1="100" y1="55" x2="100" y2="115" stroke="#0f172a" stroke-width="2"/>
+        <line x1="115" y1="55" x2="115" y2="115" stroke="#0f172a" stroke-width="2"/>
+        <line x1="70" y1="70" x2="130" y2="70" stroke="#0f172a" stroke-width="2"/>
+        <line x1="70" y1="85" x2="130" y2="85" stroke="#0f172a" stroke-width="2"/>
+        <line x1="70" y1="100" x2="130" y2="100" stroke="#0f172a" stroke-width="2"/>
+        
+        <!-- Puntos de conexión -->
+        <circle cx="70" cy="70" r="3.5" fill="white"/>
+        <circle cx="100" cy="70" r="3.5" fill="white"/>
+        <circle cx="130" cy="70" r="3.5" fill="white"/>
+        <circle cx="70" cy="100" r="3.5" fill="white"/>
+        <circle cx="130" cy="100" r="3.5" fill="white"/>
+    </g>
+    
+    <!-- Líneas conectoras desde el chip -->
+    <g stroke="#0ea5e9" stroke-width="2" stroke-linecap="round">
+        <line x1="60" y1="45" x2="60" y2="25"/>
+        <line x1="100" y1="40" x2="100" y2="15"/>
+        <line x1="140" y1="45" x2="140" y2="25"/>
+        <line x1="50" y1="85" x2="20" y2="85"/>
+        <line x1="150" y1="85" x2="180" y2="85"/>
+        <line x1="60" y1="140" x2="60" y2="165"/>
+        <line x1="100" y1="145" x2="100" y2="170"/>
+        <line x1="140" y1="140" x2="140" y2="165"/>
+    </g>
+    
+    <!-- Puntos terminales -->
+    <circle cx="60" cy="25" r="3" fill="#f59e0b"/>
+    <circle cx="100" cy="15" r="3" fill="#f59e0b"/>
+    <circle cx="140" cy="25" r="3" fill="#f59e0b"/>
+    <circle cx="20" cy="85" r="3" fill="#f59e0b"/>
+    <circle cx="180" cy="85" r="3" fill="#f59e0b"/>
+    <circle cx="60" cy="165" r="3" fill="#f59e0b"/>
+    <circle cx="100" cy="170" r="3" fill="#f59e0b"/>
+    <circle cx="140" cy="165" r="3" fill="#f59e0b"/>
+</svg>

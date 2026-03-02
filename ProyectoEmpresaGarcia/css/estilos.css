@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    width: 5rem;
+    width: 18rem;
     height: auto;
     border-radius: 0;
     background: transparent;
@@ -1092,8 +1092,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .logo-img {
-        width: 3rem;
-        height: 3rem;
+        width: 10rem;
+        height: auto;
     }
 
     .nombre-empresa {

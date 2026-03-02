@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechHub - Soluciones Tecnológicas</title>
+    <title>TechHub - Soluciones Tecnológicas Innovadoras</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Encabezado -->
@@ -12,12 +13,16 @@
         <div class="container-header">
             <div class="logo-empresa">
                 <img src="img/logo.png" alt="Logo TechHub" class="logo-img">
-                <h1 class="nombre-empresa">TechHub</h1>
+                <div class="logo-text">
+                    <h1 class="nombre-empresa">TechHub</h1>
+                    <p class="tagline">Innovación Digital</p>
+                </div>
             </div>
             <!-- Menú de Navegación -->
             <nav class="menu">
                 <ul class="menu-lista">
                     <li><a href="#inicio" class="menu-link">Inicio</a></li>
+                    <li><a href="#productos" class="menu-link">Productos</a></li>
                     <li><a href="#servicios" class="menu-link">Servicios</a></li>
                     <li><a href="#contacto" class="menu-link">Contacto</a></li>
                 </ul>
@@ -25,67 +30,341 @@
         </div>
     </header>
 
-    <!-- Sección Principal de Bienvenida -->
-    <main>
-        <section class="seccion-bienvenida" id="inicio">
-            <div class="contenido-bienvenida">
-                <h2 class="titulo-principal">Bienvenido a TechHub</h2>
-                <p class="parrafo-bienvenida">
-                    Somos una tienda de soluciones tecnológicas especializadas en productos
-                    de alta calidad y asesoramiento personalizado. Nos dedicamos a ayudarte
-                    a encontrar la mejor tecnología para tus necesidades.
+    <!-- Sección Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-contenido">
+            <div class="hero-text">
+                <h2 class="hero-titulo">Transforma Tu Tecnología</h2>
+                <p class="hero-descripcion">
+                    Descubre las mejores soluciones tecnológicas para tu negocio y vida digital
                 </p>
-                <p class="eslogan">
-                    <em>"Tecnología que Transforma, Servicio que Inspira"</em>
+                <div class="hero-botones">
+                    <button class="boton-primario">Explorar Productos</button>
+                    <button class="boton-secundario">Saber Más</button>
+                </div>
+            </div>
+            <div class="hero-imagen">
+                <div class="hero-graphic">
+                    <i class="fas fa-microchip"></i>
+                </div>
+            </div>
+        </div>
+        <div class="hero-onda"></div>
+    </section>
+
+    <!-- Sección de Características -->
+    <section class="seccion-caracteristicas">
+        <h2 class="titulo-seccion">Por Qué Elegir TechHub</h2>
+        <div class="caracteristicas-grid">
+            <div class="caracteristica-item">
+                <div class="caracteristica-icono">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Mejores Marcas</h3>
+                <p>Trabajamos solo con las marcas líderes en tecnología a nivel mundial</p>
+            </div>
+            <div class="caracteristica-item">
+                <div class="caracteristica-icono">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Garantía Completa</h3>
+                <p>Garantía oficial de fabricante + plan de protección extendida</p>
+            </div>
+            <div class="caracteristica-item">
+                <div class="caracteristica-icono">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Envío Rápido</h3>
+                <p>Entrega en 24-48 horas en la mayoría de ubicaciones</p>
+            </div>
+            <div class="caracteristica-item">
+                <div class="caracteristica-icono">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Soporte 24/7</h3>
+                <p>Equipo de expertos disponible siempre para asesorarte</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Productos Destacados -->
+    <section class="seccion-productos" id="productos">
+        <h2 class="titulo-seccion">Productos Destacados</h2>
+        <div class="productos-grid">
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <div class="producto-placeholder">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <span class="producto-oferta">-20%</span>
+                </div>
+                <div class="producto-info">
+                    <h3>Laptop Ultra Performance</h3>
+                    <p class="producto-descripcion">Procesador última generación, 16GB RAM</p>
+                    <div class="producto-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(145 reseñas)</span>
+                    </div>
+                    <div class="producto-precio">
+                        <span class="precio-anterior">$1,299</span>
+                        <span class="precio-actual">$1,039</span>
+                    </div>
+                    <button class="boton-producto">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <div class="producto-placeholder">
+                        <i class="fas fa-smartphone"></i>
+                    </div>
+                    <span class="producto-oferta nuevo">Nuevo</span>
+                </div>
+                <div class="producto-info">
+                    <h3>Smartphone Pro Max</h3>
+                    <p class="producto-descripcion">Cámara de 200MP, Pantalla AMOLED</p>
+                    <div class="producto-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(312 reseñas)</span>
+                    </div>
+                    <div class="producto-precio">
+                        <span class="precio-actual">$999</span>
+                    </div>
+                    <button class="boton-producto">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <div class="producto-placeholder">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <span class="producto-oferta">-15%</span>
+                </div>
+                <div class="producto-info">
+                    <h3>Auriculares Inalámbricos Premium</h3>
+                    <p class="producto-descripcion">Cancelación de ruido, 48h batería</p>
+                    <div class="producto-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(89 reseñas)</span>
+                    </div>
+                    <div class="producto-precio">
+                        <span class="precio-anterior">$399</span>
+                        <span class="precio-actual">$339</span>
+                    </div>
+                    <button class="boton-producto">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="seccion-servicios" id="servicios">
+        <h2 class="titulo-seccion">Nuestros Servicios</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <div class="servicio-icono">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3 class="titulo-servicio">Asesoramiento Técnico</h3>
+                <p class="descripcion-servicio">
+                    Expertos en tecnología disponibles para asesorarte sobre el mejor producto
+                    que se adapte a tus necesidades específicas y presupuesto.
                 </p>
-                <button class="boton-cta">Conoce más</button>
+                <a href="#" class="servicio-link">Consultar →</a>
             </div>
-        </section>
 
-        <!-- Sección de Servicios -->
-        <section class="seccion-servicios" id="servicios">
-            <h2 class="titulo-seccion">Nuestros Servicios</h2>
-            <div class="servicios-grid">
-                <div class="servicio-card">
-                    <h3 class="titulo-servicio">Asesoramiento Técnico</h3>
-                    <p class="descripcion-servicio">
-                        Contamos con expertos que te guiarán en la elección de los mejores productos
-                        según tus necesidades específicas.
-                    </p>
+            <div class="servicio-card">
+                <div class="servicio-icono">
+                    <i class="fas fa-shield-alt"></i>
                 </div>
-                <div class="servicio-card">
-                    <h3 class="titulo-servicio">Garantía Extendida</h3>
-                    <p class="descripcion-servicio">
-                        Ofrecemos planes de garantía extendida para proteger tu inversión
-                        en tecnología de forma integral.
-                    </p>
+                <h3 class="titulo-servicio">Garantía Extendida</h3>
+                <p class="descripcion-servicio">
+                    Planes de protección y garantía extendida que aseguran la máxima protección
+                    de tu inversión tecnológica por años.
+                </p>
+                <a href="#" class="servicio-link">Ver Planes →</a>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icono">
+                    <i class="fas fa-tools"></i>
                 </div>
-                <div class="servicio-card">
-                    <h3 class="titulo-servicio">Instalación y Soporte</h3>
-                    <p class="descripcion-servicio">
-                        Nuestro equipo de profesionales se encarga de la instalación
-                        y brinda soporte continuo después de tu compra.
+                <h3 class="titulo-servicio">Instalación y Soporte</h3>
+                <p class="descripcion-servicio">
+                    Instalación profesional de tus equipos y soporte técnico 24/7 para
+                    resolver cualquier inconveniente que puedas tener.
+                </p>
+                <a href="#" class="servicio-link">Solicitar Servicio →</a>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icono">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3 class="titulo-servicio">Cambio Seguro</h3>
+                <p class="descripcion-servicio">
+                    Programa de canje de equipos usados con evaluación justa de precio
+                    y créditos para tu siguiente compra.
+                </p>
+                <a href="#" class="servicio-link">Canjear Equipo →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonio -->
+    <section class="seccion-testimonio">
+        <h2 class="titulo-seccion">Lo Que Dicen Nuestros Clientes</h2>
+        <div class="testimonios-container">
+            <div class="testimonio-card">
+                <div class="testimonio-contenido">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonio-texto">
+                        "Excelente servicio y asesoramiento. Los productos son de top calidad y el equipo 
+                        fue muy profesional en la instalación. Totalmente recomendado."
                     </p>
+                    <p class="testimonio-autor">— María González, Empresaria</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Sección de Contacto -->
-        <section class="seccion-contacto" id="contacto">
-            <h2 class="titulo-seccion">Contáctanos</h2>
-            <div class="info-contacto">
-                <p class="contacto-item"><strong>Correo:</strong> info@techhub.com</p>
-                <p class="contacto-item"><strong>Teléfono:</strong> +34 912 345 678</p>
-                <p class="contacto-item"><strong>Dirección:</strong> Calle Tecnológica 123, Madrid</p>
+            <div class="testimonio-card">
+                <div class="testimonio-contenido">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonio-texto">
+                        "El mejor lugar para comprar tecnología en la ciudad. Precios competitivos, 
+                        gran variedad de productos y garantía que realmente funciona."
+                    </p>
+                    <p class="testimonio-autor">— Carlos Mendez, Ingeniero</p>
+                </div>
             </div>
-        </section>
-    </main>
+            <div class="testimonio-card">
+                <div class="testimonio-contenido">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonio-texto">
+                        "Llevamos más de 3 años comprando aquí. Su equipo de soporte técnico es 
+                        simplemente excepcional. Siempre están disponibles para ayudar."
+                    </p>
+                    <p class="testimonio-autor">— Ana Rodríguez, Directora de TI</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Pie de Página -->
+    <!-- Sección de Contacto -->
+    <section class="seccion-contacto" id="contacto">
+        <h2 class="titulo-seccion">Ponte en Contacto</h2>
+        <div class="contacto-contenedor">
+            <div class="contacto-info">
+                <div class="contacto-item">
+                    <div class="contacto-icono">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contacto-detalle">
+                        <h4>Ubicación</h4>
+                        <p>Calle Tecnológica 123<br>Madrid, España 28001</p>
+                    </div>
+                </div>
+                <div class="contacto-item">
+                    <div class="contacto-icono">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contacto-detalle">
+                        <h4>Teléfono</h4>
+                        <p>+34 912 345 678<br>Lunes - Viernes: 8am - 8pm</p>
+                    </div>
+                </div>
+                <div class="contacto-item">
+                    <div class="contacto-icono">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contacto-detalle">
+                        <h4>Email</h4>
+                        <p>info@techhub.com<br>soporte@techhub.com</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contacto-formulario">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu email" required>
+                <textarea placeholder="Tu mensaje..." rows="5" required></textarea>
+                <button type="submit" class="boton-primario" style="width: 100%;">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-contenido">
-            <p class="footer-texto">&copy; 2026 TechHub. Todos los derechos reservados.</p>
-            <p class="footer-texto">Diseño y Desarrollo Web - Proyecto Educativo</p>
+        <div class="footer-principal">
+            <div class="footer-columna">
+                <h4>Sobre TechHub</h4>
+                <p>Tu tienda de confianza para todas tus necesidades tecnológicas con más de 10 años de experiencia.</p>
+                <div class="redes-sociales">
+                    <a href="#" class="red-social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="red-social"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="red-social"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="red-social"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-columna">
+                <h4>Productos</h4>
+                <ul>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Smartphones</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#">Asesoramiento</a></li>
+                    <li><a href="#">Garantía</a></li>
+                    <li><a href="#">Soporte</a></li>
+                    <li><a href="#">Cambio Seguro</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>&copy; 2026 TechHub - Todos los derechos reservados.</p>
+            <p>Diseño y Desarrollo: Proyecto Educativo | Hecho con <i class="fas fa-heart"></i> para ti</p>
         </div>
     </footer>
 </body>

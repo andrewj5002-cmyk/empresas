@@ -9,30 +9,44 @@
 }
 
 :root {
-    /* Colores Corporativos */
-    --color-primario: #1e3a8a;      /* Azul Oscuro TechHub */
-    --color-secundario: #0ea5e9;    /* Azul Claro */
-    --color-acento: #f59e0b;        /* Naranja/Dorado */
-    --color-fondo: #f8fafc;         /* Gris muy claro */
-    --color-texto: #1f2937;         /* Gris Oscuro */
-    --color-texto-claro: #6b7280;   /* Gris Medio */
+    /* Colores Corporativos - Paleta mejorada */
+    --color-primario: #0f172a;      /* Azul muy oscuro */
+    --color-secundario: #0ea5e9;    /* Azul brillante */
+    --color-acento: #f59e0b;        /* Naranja vibrante */
+    --color-acento-oscuro: #d97706; /* Naranja oscuro */
+    --color-fondo: #f8fafc;         /* Blanco grisáceo */
+    --color-fondo-oscuro: #1e293b;  /* Gris muy oscuro */
+    --color-texto: #0f172a;         /* Negro azulado */
+    --color-texto-claro: #64748b;   /* Gris medio */
+    --color-exito: #10b981;         /* Verde éxito */
     
-    /* Tipografía */
-    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --fuente-titulo: 'Arial', sans-serif;
+    /* Tipografía mejorada */
+    --fuente-principal: 'Inter', 'Segoe UI', sans-serif;
+    --fuente-titulo: 'Poppins', 'Arial', sans-serif;
     
     /* Tamaños (en rem) */
-    --tamaño-base: 1rem;            /* 16px */
-    --tamaño-pequeño: 0.875rem;     /* 14px */
-    --tamaño-grande: 1.125rem;      /* 18px */
-    --tamaño-titulo-h1: 2.5rem;     /* 40px */
-    --tamaño-titulo-h2: 2rem;       /* 32px */
-    --tamaño-titulo-h3: 1.5rem;     /* 24px */
+    --tamaño-base: 1rem;
+    --tamaño-pequeño: 0.875rem;
+    --tamaño-grande: 1.125rem;
+    --tamaño-xl: 1.25rem;
+    --tamaño-titulo-h1: 3.5rem;
+    --tamaño-titulo-h2: 2.5rem;
+    --tamaño-titulo-h3: 1.75rem;
+    
+    /* Espaciación */
+    --espaciado-xs: 0.5rem;
+    --espaciado-sm: 1rem;
+    --espaciado-md: 1.5rem;
+    --espaciado-lg: 2rem;
+    --espaciado-xl: 3rem;
+    --espaciado-2xl: 4rem;
 }
 
 /* ============================================
    ESTILOS GLOBALES
    ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -44,6 +58,91 @@ body {
     background-color: var(--color-fondo);
     line-height: 1.6;
     font-size: var(--tamaño-base);
+    overflow-x: hidden;
+}
+
+main {
+    overflow: visible;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-titulo);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.titulo-seccion {
+    font-size: var(--tamaño-titulo-h2);
+    color: var(--color-primario);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4rem;
+    height: 0.375rem;
+    background: linear-gradient(90deg, var(--color-secundario), var(--color-acento));
+    border-radius: 2px;
 }
 
 /* ============================================
@@ -51,18 +150,20 @@ body {
    ============================================ */
 
 .header {
-    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
-    padding: 1.5rem 0;
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-fondo-oscuro) 100%);
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    background-color: rgba(15, 23, 42, 0.95);
 }
 
 .container-header {
-    max-width: 75rem;
+    max-width: 90rem;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--espaciado-lg);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,59 +173,83 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+    animation: slideInLeft 0.6s ease-out;
 }
 
 .logo-img {
     width: 3.5rem;
     height: 3.5rem;
-    border-radius: 0.5rem;
-    background-color: white;
-    padding: 0.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, var(--color-secundario), var(--color-acento));
+    padding: 0.375rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(14, 165, 233, 0.3);
+    transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.75rem 2rem rgba(14, 165, 233, 0.4);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .nombre-empresa {
-    font-size: var(--tamaño-titulo-h2);
+    font-size: var(--tamaño-xl);
     color: white;
     font-family: var(--fuente-titulo);
-    font-weight: bold;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    background: linear-gradient(135deg, #ffffff 0%, var(--color-secundario) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tagline {
+    font-size: var(--tamaño-pequeño);
+    color: var(--color-secundario);
+    font-weight: 600;
     letter-spacing: 0.05em;
 }
 
 /* Menú de Navegación */
-
 .menu-lista {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .menu-link {
     color: white;
     text-decoration: none;
-    font-size: var(--tamaño-grande);
-    font-weight: 500;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-size: var(--tamaño-base);
+    font-weight: 600;
+    transition: all 0.3s ease;
     position: relative;
+    padding: 0.5rem 0;
 }
 
 .menu-link:hover {
-    color: var(--color-acento);
-    text-shadow: 0 0 0.5rem rgba(245, 158, 11, 0.3);
+    color: var(--color-secundario);
 }
 
-.menu-link::after {
+.menu-link::before {
     content: '';
     position: absolute;
-    bottom: -0.5rem;
+    bottom: 0;
     left: 0;
     width: 0;
-    height: 0.125rem;
-    background-color: var(--color-acento);
+    height: 0.25rem;
+    background: linear-gradient(90deg, var(--color-secundario), var(--color-acento));
     transition: width 0.3s ease;
+    border-radius: 2px;
 }
 
-.menu-link:hover::after {
+.menu-link:hover::before {
     width: 100%;
 }
 

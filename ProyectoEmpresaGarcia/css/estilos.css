@@ -1,0 +1,362 @@
+/* ============================================
+   RESETEO Y VARIABLES GLOBALES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colores Corporativos */
+    --color-primario: #1e3a8a;      /* Azul Oscuro TechHub */
+    --color-secundario: #0ea5e9;    /* Azul Claro */
+    --color-acento: #f59e0b;        /* Naranja/Dorado */
+    --color-fondo: #f8fafc;         /* Gris muy claro */
+    --color-texto: #1f2937;         /* Gris Oscuro */
+    --color-texto-claro: #6b7280;   /* Gris Medio */
+    
+    /* Tipografía */
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fuente-titulo: 'Arial', sans-serif;
+    
+    /* Tamaños (en rem) */
+    --tamaño-base: 1rem;            /* 16px */
+    --tamaño-pequeño: 0.875rem;     /* 14px */
+    --tamaño-grande: 1.125rem;      /* 18px */
+    --tamaño-titulo-h1: 2.5rem;     /* 40px */
+    --tamaño-titulo-h2: 2rem;       /* 32px */
+    --tamaño-titulo-h3: 1.5rem;     /* 24px */
+}
+
+/* ============================================
+   ESTILOS GLOBALES
+   ============================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+    font-size: var(--tamaño-base);
+}
+
+/* ============================================
+   ENCABEZADO (HEADER)
+   ============================================ */
+
+.header {
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.container-header {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-empresa {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    padding: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+}
+
+.nombre-empresa {
+    font-size: var(--tamaño-titulo-h2);
+    color: white;
+    font-family: var(--fuente-titulo);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+/* Menú de Navegación */
+
+.menu-lista {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+    font-size: var(--tamaño-grande);
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+}
+
+.menu-link:hover {
+    color: var(--color-acento);
+    text-shadow: 0 0 0.5rem rgba(245, 158, 11, 0.3);
+}
+
+.menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 0;
+    height: 0.125rem;
+    background-color: var(--color-acento);
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   SECCIÓN DE BIENVENIDA
+   ============================================ */
+
+.seccion-bienvenida {
+    max-width: 75rem;
+    margin: 3rem auto;
+    padding: 3rem 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.contenido-bienvenida {
+    text-align: center;
+}
+
+.titulo-principal {
+    font-size: var(--tamaño-titulo-h1);
+    color: var(--color-primario);
+    margin-bottom: 1.5rem;
+    font-family: var(--fuente-titulo);
+}
+
+.parrafo-bienvenida {
+    font-size: var(--tamaño-grande);
+    color: var(--color-texto-claro);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eslogan {
+    font-size: var(--tamaño-grande);
+    color: var(--color-secundario);
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* Botón Call-to-Action */
+
+.boton-cta {
+    background: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-primario) 100%);
+    color: white;
+    padding: 0.875rem 2.5rem;
+    font-size: var(--tamaño-grande);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.25rem 0.75rem rgba(30, 58, 138, 0.3);
+    letter-spacing: 0.05em;
+}
+
+.boton-cta:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(30, 58, 138, 0.4);
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+}
+
+.boton-cta:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   SECCIÓN DE SERVICIOS
+   ============================================ */
+
+.seccion-servicios {
+    max-width: 75rem;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+}
+
+.titulo-seccion {
+    font-size: var(--tamaño-titulo-h2);
+    color: var(--color-primario);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: var(--fuente-titulo);
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+}
+
+.servicio-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 0.375rem solid var(--color-secundario);
+}
+
+.servicio-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12);
+    border-top-color: var(--color-acento);
+}
+
+.titulo-servicio {
+    font-size: var(--tamaño-titulo-h3);
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+    font-family: var(--fuente-titulo);
+}
+
+.descripcion-servicio {
+    font-size: var(--tamaño-base);
+    color: var(--color-texto-claro);
+    line-height: 1.7;
+}
+
+/* ============================================
+   SECCIÓN DE CONTACTO
+   ============================================ */
+
+.seccion-contacto {
+    max-width: 75rem;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contacto-item {
+    font-size: var(--tamaño-grande);
+    color: var(--color-texto);
+    padding: 1rem;
+    background-color: var(--color-fondo);
+    border-left: 0.375rem solid var(--color-secundario);
+    border-radius: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+/* ============================================
+   PIE DE PÁGINA (FOOTER)
+   ============================================ */
+
+.footer {
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer-contenido {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.footer-texto {
+    font-size: var(--tamaño-base);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.footer-texto:last-child {
+    font-size: var(--tamaño-pequeño);
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 48rem) {
+    :root {
+        --tamaño-titulo-h1: 2rem;
+        --tamaño-titulo-h2: 1.5rem;
+        --tamaño-titulo-h3: 1.25rem;
+    }
+
+    .container-header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .menu-lista {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-bienvenida,
+    .seccion-contacto {
+        border-radius: 0.5rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    :root {
+        --tamaño-titulo-h1: 1.75rem;
+        --tamaño-titulo-h2: 1.375rem;
+        --tamaño-grande: 1rem;
+    }
+
+    .logo-img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .nombre-empresa {
+        font-size: 1.5rem;
+    }
+
+    .boton-cta {
+        padding: 0.75rem 1.5rem;
+        font-size: var(--tamaño-base);
+    }
+}
